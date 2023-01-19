@@ -1,0 +1,11 @@
+def solution(N):
+    count = 0
+    gap_list=[]
+    bin_var = format(N,"b")
+    for bit in bin_var:
+        if (bit =="1"):
+            gap_list.append(count)
+            count =0
+        else:
+            count +=1
+    return max(gap_list)
